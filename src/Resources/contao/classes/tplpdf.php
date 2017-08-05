@@ -14,7 +14,7 @@ namespace Softleister\Pdftemplate;
 //-----------------------------------------------------------------
 //  add special AddPage to class
 //-----------------------------------------------------------------
-class TPLPDF extends FPDI
+class TPLPDF extends \FPDI
 {
     /**
      * Actual num_pages

@@ -15,4 +15,4 @@ define('PDFTEMPLATE_BUILD'  , '0');
 //-------------------------------------------------------------------------
 //  HOOKS
 //-------------------------------------------------------------------------
-$GLOBALS['TL_HOOKS']['printArticleAsPdf'][] = array('pdf_hookControl', 'myPrintArticleAsPdf');
+$GLOBALS['TL_HOOKS']['printArticleAsPdf'][] = array('Softleister\Pdftemplate\pdf_hookControl', 'myPrintArticleAsPdf');
