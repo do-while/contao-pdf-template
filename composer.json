@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Softleister\\SoftleisterPdftemplateBundle\\": "src/"
+            "Softleister\\PdftemplateBundle\\": "src/"
         },
         "classmap": [
             "src/Resources/contao/"
@@ -39,6 +39,6 @@
         "branch-alias": {
             "dev-develop": "1.1.x-dev"
         },
-		"contao-manager-plugin": "Softleister\\SoftleisterPdftemplateBundle\\ContaoManager\\Plugin"
+		"contao-manager-plugin": "Softleister\\PdftemplateBundle\\ContaoManager\\Plugin"
     }
 }
