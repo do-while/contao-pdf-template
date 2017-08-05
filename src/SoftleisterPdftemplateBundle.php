@@ -9,7 +9,7 @@
  *
  */
 
-namespace Softleister\Pdftemplate;
+namespace Softleister\PdftemplateBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
