@@ -1,0 +1,44 @@
+{
+    "name": "do-while/contao-pdf-template-bundle",
+    "description": "With pdf-template, a saved pdf file can be activated as a layout template for PDF output.",
+    "keywords": ["contao", "widget", "pdf"],
+    "type": "contao-bundle",
+    "homepage": "https://www.softleister.de",
+    "license": "LGPL-3.0+",
+    "authors": [{
+        "name": "Hagen Klemp",
+        "homepage": "https://www.softleister.de",
+        "role": "Project leader"
+    }],
+    "support": {
+        "issues": "https://github.com/do-while/contao-pdf-template/issues",
+        "wiki": "https://github.com/do-while/contao-pdf-template/wiki",
+        "source": "https://github.com/do-while/contao-pdf-template"
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "contao/core-bundle": ">=4.4.0,<5.0",
+        "setasign/fpdi-tcpdf": "1.6.2"
+    },
+    "autoload": {
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/cache/",
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ],
+        "psr-4": {
+            "Softleister\\PdftemplateBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "1.1.x-dev"
+        },
+		"contao-manager-plugin": "Softleister\\PdftemplateBundle\\ContaoManager\\Plugin"
+    }
+}
