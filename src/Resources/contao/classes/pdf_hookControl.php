@@ -75,7 +75,6 @@ class pdf_hookControl extends \Backend
 
         // Include libraries
         require_once(TL_ROOT . '/vendor/contao/core-bundle/src/Resources/contao/config/tcpdf.php');
-        require_once(TL_ROOT . '/vendor/setasign/fpdi-tcpdf/fpdi_bridge.php');        // FPDI bridge
 
         //-- Calculating dimensions
         $margins = unserialize($root_details->pdfMargin);                     // Margins as an array
