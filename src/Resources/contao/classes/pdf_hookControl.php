@@ -74,7 +74,11 @@ class pdf_hookControl extends \Backend
         $l['w_page'] = 'page';
 
         // Include libraries
-        require_once(TL_ROOT . '/vendor/contao/core-bundle/src/Resources/contao/config/tcpdf.php');
+        if(file_exists(TL_ROOT . '/vendor/contao/core-bundle/src/Resources/contao/config/tcpdf.php')) {
+            require_once(TL_ROOT . '/vendor/contao/core-bundle/src/Resources/contao/config/tcpdf.php');
+        } else {
+            require_once(TL_ROOT . '/vendor/contao/tcpdf-bundle/src/Resources/contao/config/tcpdf.php');
+        }
 
         //-- Calculating dimensions
         $margins = unserialize($root_details->pdfMargin);                     // Margins as an array
