@@ -95,7 +95,7 @@ class pdf_hookControl extends \Backend
         }
         // 5: not found? - Then take it from this extension
         else {
-            require_once(TL_ROOT . '/vendor/do-while/contao-pdf-template/src/Resources/contao/config/tcpdf.php');
+            require_once(TL_ROOT . '/vendor/do-while/contao-pdf-template-bundle/src/Resources/contao/config/tcpdf.php');
         }
 
 

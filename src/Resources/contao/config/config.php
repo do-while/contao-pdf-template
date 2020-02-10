@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2011-2017
+ * @copyright  Softleister 2011-2020
  * @author     Softleister <info@softleister.de>
  * @package    pdf-template
  * @license    LGPL
@@ -9,8 +9,8 @@
  *
  */
 
-define('PDFTEMPLATE_VERSION', '1.0');
-define('PDFTEMPLATE_BUILD'  , '0');
+define('PDFTEMPLATE_VERSION', '1.2');
+define('PDFTEMPLATE_BUILD'  , '1');
 
 //-------------------------------------------------------------------------
 //  HOOKS
