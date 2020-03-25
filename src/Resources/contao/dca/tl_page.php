@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2011-2017
+ * @copyright  Softleister 2011-2020
  * @author     Softleister <info@softleister.de>
  * @package    pdf-template
  * @license    LGPL
@@ -9,8 +9,15 @@
  *
  */
 
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
+
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'pdftemplate';
-$GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace('{cache_legend', '{pdf_legend:hide},pdftemplate;{cache_legend', $GLOBALS['TL_DCA']['tl_page']['palettes']['root']);
+
+PaletteManipulator::create()
+	->addLegend('pdf_legend', 'cache_legend')
+	->addField('pdftemplate', 'pdf_legend', PaletteManipulator::POSITION_APPEND)
+	->applyToPalette('root', 'tl_page')
+	->applyToPalette('rootfallback', 'tl_page');
 
 // add subpalette
 $GLOBALS['TL_DCA']['tl_page']['subpalettes']['pdftemplate'] = 'pdfTplSRC,pdfMargin,pdfIgnoreCSS';

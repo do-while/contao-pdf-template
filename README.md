@@ -6,16 +6,16 @@ ___
 
 
 Deutsches Handbuch siehe<br>
-[pdf-template für Contao 4.4](https://github.com/do-while/contao-pdf-template/wiki/pdf-template-f%C3%BCr-Contao-4.4-(DE))
+[pdf-template für Contao ab 4.4](https://github.com/do-while/contao-pdf-template/wiki/pdf-template-f%C3%BCr-Contao-4.4-(DE))
 
 
 English Manual see<br>
-[pdf-template for Contao 4.4](https://github.com/do-while/contao-pdf-template/wiki/pdf-template-for-Contao-4.4-(EN))
+[pdf-template for Contao from 4.4](https://github.com/do-while/contao-pdf-template/wiki/pdf-template-for-Contao-4.4-(EN))
 
 
 **Version:**<br>
-* 1.0.0 stable - 2017-08-05<br>
-Version für Contao ab Version 4.4 LTS
+* 1.1.0 stable - 2020-03-25<br>Version für Contao ab Version 4.9 LTS
+* 1.0.0 stable - 2017-08-05<br>Version für Contao ab Version 4.4 LTS
 
 
 **Problem melden | Report Problem:**<br>
@@ -24,4 +24,4 @@ https://github.com/do-while/contao-pdf-template/issues
 
 
 ___
-Softleister - 2017-08-05
+Softleister - 2020-03-25
