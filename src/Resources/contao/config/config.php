@@ -9,8 +9,8 @@
  *
  */
 
-define('PDFTEMPLATE_VERSION', '1.2');
-define('PDFTEMPLATE_BUILD'  , '1');
+define('PDFTEMPLATE_VERSION', '1.3');
+define('PDFTEMPLATE_BUILD'  , '0');
 
 //-------------------------------------------------------------------------
 //  HOOKS

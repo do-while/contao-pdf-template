@@ -14,7 +14,7 @@ English Manual see<br>
 
 
 **Version:**<br>
-* 1.1.0 stable - 2020-03-25<br>Version für Contao ab Version 4.9 LTS
+* 1.3.0 stable - 2020-03-25<br>Version für Contao ab Version 4.9 LTS
 * 1.0.0 stable - 2017-08-05<br>Version für Contao ab Version 4.4 LTS
 
 
