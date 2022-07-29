@@ -16,7 +16,7 @@
         "source": "https://github.com/do-while/contao-pdf-template"
     },
     "require": {
-        "php": "^7.1",
+        "php": ">=7.1",
         "contao/core-bundle": "^4.9",
         "setasign/fpdi-tcpdf": "^2.0"
     },
