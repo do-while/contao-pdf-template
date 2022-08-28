@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2011-2017
+ * @copyright  Softleister 2011-2022
  * @author     Softleister <info@softleister.de>
  * @package    pdf-template
  * @license    LGPL
@@ -11,7 +11,13 @@
 
 namespace Softleister\Pdftemplate;
 
-class pdf_hookControl extends \Backend
+use Contao\Backend;
+use Contao\FilesModel;
+use Contao\Config;
+use Contao\StringUtil;
+
+
+class pdf_hookControl extends Backend
 {
     //-----------------------------------------------------------------
     // myPrintArticleAsPdf:  create PDF with template file
@@ -27,7 +33,7 @@ class pdf_hookControl extends \Backend
         if($root_details->pdftemplate != '1') return;                         // PDF template == OFF
 
         // get template pdf
-        $root_details->pdfTplSRC = \FilesModel::findByUuid($root_details->pdfTplSRC)->path;
+        $root_details->pdfTplSRC = FilesModel::findByUuid($root_details->pdfTplSRC)->path;
         if( !file_exists(TL_ROOT . '/' . $root_details->pdfTplSRC) ) return;  // template file not found
 
         // URL decode image paths (see #6411)
@@ -69,13 +75,13 @@ class pdf_hookControl extends \Backend
 
         // TCPDF configuration
         $l['a_meta_dir'] = 'ltr';
-        $l['a_meta_charset'] = \Config::get('characterSet');
+        $l['a_meta_charset'] = Config::get('characterSet');
         $l['a_meta_language'] = substr($GLOBALS['TL_LANGUAGE'], 0, 2);
         $l['w_page'] = 'page';
 
 
         //-- Include Settings
-        $tcpdfinit = \Config::get("pdftemplateTcpdf");
+        $tcpdfinit = Config::get("pdftemplateTcpdf");
 
         // 1: Own settings addressed via app/config/config.yml
         if( !empty($tcpdfinit) && file_exists(TL_ROOT . '/' . $tcpdfinit) ) {
@@ -100,7 +106,7 @@ class pdf_hookControl extends \Backend
 
 
         //-- Calculating dimensions
-        $margins = unserialize($root_details->pdfMargin);                     // Margins as an array
+        $margins = StringUtil::deserialize($root_details->pdfMargin);                     // Margins as an array
         switch( $margins['unit'] ) {
             case 'cm':  $factor = 10.0;     break;
             default:    $factor = 1.0;
@@ -121,8 +127,8 @@ class pdf_hookControl extends \Backend
         $pdf->SetSubject($objArticle->title);
         $pdf->SetKeywords($objArticle->keywords);
 
-		// Prevent font subsetting (huge speed improvement)
-		$pdf->setFontSubsetting(false);
+        // Prevent font subsetting (huge speed improvement)
+        $pdf->setFontSubsetting(false);
 
         $pdf->SetDisplayMode('fullwidth', 'OneColumn', 'UseNone');
         $pdf->SetHeaderData( );
@@ -161,7 +167,7 @@ class pdf_hookControl extends \Backend
 
         // Close and output PDF document
         $pdf->lastPage();
-		$pdf->Output(\StringUtil::standardize(ampersand($objArticle->title, false)) . '.pdf', 'D');
+        $pdf->Output(StringUtil::standardize(ampersand($objArticle->title, false)) . '.pdf', 'D');
 
         // Stop script execution
         exit;

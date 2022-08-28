@@ -16,8 +16,8 @@
         "source": "https://github.com/do-while/contao-pdf-template"
     },
     "require": {
-        "php": ">=7.1",
-        "contao/core-bundle": "^4.9",
+        "php": "^7.1 | ^8.0",
+        "contao/core-bundle": "~4.9",
         "setasign/fpdi-tcpdf": "^2.0"
     },
     "autoload": {
@@ -36,6 +36,6 @@
         ]
     },
     "extra": {
-		"contao-manager-plugin": "Softleister\\PdftemplateBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Softleister\\PdftemplateBundle\\ContaoManager\\Plugin"
     }
 }
